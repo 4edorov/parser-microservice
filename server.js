@@ -14,7 +14,7 @@ app.get('/api/whoami', (req, res) => {
     ipaddress: req.headers['x-forwarded-for'] || req.connection.remoteAddress || req.socket.remoteAddress,
     language: req.headers['accept-language'],
     software: req.headers['user-agent']
-  }
+  } 
 
   res.json(data)
 })

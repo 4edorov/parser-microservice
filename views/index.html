@@ -10,7 +10,7 @@
   <body>
     <script>
       const headers = new Headers({"Accept": "text/html"})
-      fetch('http://localhost:3000/api/whoami', {headers})
+      fetch(`${window.location.origin}/api/whoami`, {headers})
         .then(response => response.json())
         .then(data => {
           document.body.innerHTML = JSON.stringify(data)
